@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/background"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <com.qriyo.android.customview.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        android:id="@+id/forgetPassword"
+        android:textColor="@android:color/white"
+        android:text="@string/fpassword"
+        android:textSize="22dp"
+        />
+
+    <com.qriyo.android.customview.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp"
+        android:id="@+id/signup"
+        android:textColor="@android:color/white"
+        android:text="@string/signup"
+        android:textSize="22dp"
+        />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toplogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/logo"
+        />
+
+    <com.qriyo.android.customview.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/toplogo"
+        android:layout_marginTop="5dp"
+        android:id="@+id/qriyolbl"
+        android:textColor="@android:color/white"
+        android:text="@string/qriyo"
+        android:textSize="22dp"
+        />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/qriyolbl"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        >
+
+
+
+
+         <com.qriyo.android.customview.MyEditText
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+             android:backgroundTint="@android:color/white"
+            android:hint="@string/uname"
+            android:id="@+id/editUserName" />
+
+        <com.qriyo.android.customview.MyEditText
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:backgroundTint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:hint="@string/pass"
+            android:inputType="textPassword"
+            android:id="@+id/editPassword" />
+
+
+        <com.qriyo.android.customview.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="16dp"
+            android:id="@+id/login"
+            android:text="@string/login"
+            android:background="@drawable/loginbutton"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            />
+
+        <com.qriyo.android.customview.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="16dp"
+            android:text="OR"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            />
+
+        <com.qriyo.android.customview.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="16dp"
+            android:id="@+id/fbbutton"
+            android:text="@string/fblogin"
+            android:background="@drawable/fbloginbutton"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

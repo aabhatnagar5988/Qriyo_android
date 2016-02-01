@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Qriyo</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="fpassword">Forget Password?</string>
+    <string name="signup">SignUp</string>
+    <string name="qriyo">QRIYO</string>
+    <string name="uname">User Name</string>
+    <string name="pass">Password</string>
+    <string name="login">Login</string>
+    <string name="fblogin">Login with facebook</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone Number</string>
+    <string name="cpass">Confirm Password</string>
+    <string name="alreadymember">Already a member SignIn</string>
+</resources>
