@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/background"
+    android:background="@drawable/bg"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
 
@@ -12,7 +12,7 @@
         android:id="@+id/forgetPassword"
         android:textColor="@android:color/white"
         android:text="@string/fpassword"
-        android:textSize="22dp"
+        android:textSize="18dp"
         />
 
     <com.qriyo.android.customview.MyTextView
@@ -24,7 +24,7 @@
         android:id="@+id/signup"
         android:textColor="@android:color/white"
         android:text="@string/signup"
-        android:textSize="22dp"
+        android:textSize="18dp"
         />
 
 
@@ -34,8 +34,8 @@
         android:id="@+id/toplogo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:background="@drawable/logo"
-        />
+        android:scaleType="fitXY"
+        android:src="@drawable/logo_1" />
 
     <com.qriyo.android.customview.MyTextView
         android:layout_width="wrap_content"
@@ -45,7 +45,6 @@
         android:layout_marginTop="5dp"
         android:id="@+id/qriyolbl"
         android:textColor="@android:color/white"
-        android:text="@string/qriyo"
         android:textSize="22dp"
         />
 
@@ -71,6 +70,9 @@
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
              android:backgroundTint="@android:color/white"
+             android:drawableLeft="@drawable/usernameselector"
+             android:drawablePadding="15dp"
+
             android:hint="@string/uname"
             android:id="@+id/editUserName" />
 
@@ -81,6 +83,8 @@
             android:backgroundTint="@android:color/white"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
+            android:drawableLeft="@drawable/passwordselector"
+            android:drawablePadding="15dp"
             android:hint="@string/pass"
             android:inputType="textPassword"
             android:id="@+id/editPassword" />
@@ -90,7 +94,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@android:color/white"
-            android:textSize="16dp"
+            android:textSize="18dp"
             android:id="@+id/login"
             android:text="@string/login"
             android:background="@drawable/loginbutton"
@@ -114,7 +118,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@android:color/white"
-            android:textSize="16dp"
+            android:textSize="18dp"
             android:id="@+id/fbbutton"
             android:text="@string/fblogin"
             android:background="@drawable/fbloginbutton"

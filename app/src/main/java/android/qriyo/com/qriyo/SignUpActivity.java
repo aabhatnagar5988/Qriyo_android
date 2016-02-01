@@ -1,7 +1,10 @@
 package android.qriyo.com.qriyo;
 
 import android.app.Activity;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.ScaleDrawable;
 import android.os.Bundle;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.qriyo.android.customview.MyEditText;
@@ -46,7 +49,7 @@ public class SignUpActivity extends Activity{
     private void adjustUIComponent()
     {
         CommonViewUtility cv=CommonViewUtility.getInstance();
-        cv.adjustRelative(toplogo,451,342);
+        cv.adjustRelative(toplogo,451,411);
         cv.adjustLinearWidth(editName,900);
         cv.adjustLinearWidth(editPassword,900);
         cv.adjustLinearWidth(editEmail,900);
@@ -57,7 +60,24 @@ public class SignUpActivity extends Activity{
 
         cv.adjustRelativeMargin(toplogo,100,CommonViewUtility.TOP);
 
+        setDrawableStart(R.drawable.icn_name,editName);
+        setDrawableStart(R.drawable.icn_mail,editEmail);
+        setDrawableStart(R.drawable.icn_password,editPassword);
+        setDrawableStart(R.drawable.icn_password,editCPassword);
+        setDrawableStart(R.drawable.icn_phone,editPhonenumber);
+
     }
+
+    private void setDrawableStart(int resource,EditText et)
+    {
+        Drawable drawable = getResources().getDrawable(resource);
+        drawable.setBounds(0, 0, (int)(drawable.getIntrinsicWidth()*0.3),
+                (int)(drawable.getIntrinsicHeight()*0.3));
+        ScaleDrawable sd = new ScaleDrawable(drawable, 0, 20, 20);
+
+        et.setCompoundDrawables(sd.getDrawable(), null, null, null);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -2,8 +2,11 @@ package android.qriyo.com.qriyo;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.ScaleDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.qriyo.android.customview.MyEditText;
@@ -42,12 +45,15 @@ public class LoginActivity extends Activity{
     private void adjustUIComponent()
     {
         CommonViewUtility cv=CommonViewUtility.getInstance();
-        cv.adjustRelative(toplogo,451,342);
+        cv.adjustRelative(toplogo,451,411);
         cv.adjustLinearWidth(editUserName,900);
         cv.adjustLinearWidth(editPassword,900);
         cv.adjustLinear(login,860,140);
         cv.adjustLinear(fbbutton,860,140);
         cv.adjustRelativeMargin(toplogo,250,CommonViewUtility.TOP);
+
+        setDrawableStart(R.drawable.icn_name,editUserName);
+        setDrawableStart(R.drawable.icn_password,editPassword);
 
     }
 
@@ -70,6 +76,15 @@ public class LoginActivity extends Activity{
     }
 
 
+    private void setDrawableStart(int resource,EditText et)
+    {
+        Drawable drawable = getResources().getDrawable(resource);
+        drawable.setBounds(0, 0, (int)(drawable.getIntrinsicWidth()*0.3),
+                (int)(drawable.getIntrinsicHeight()*0.3));
+        ScaleDrawable sd = new ScaleDrawable(drawable, 0, 20, 20);
+
+        et.setCompoundDrawables(sd.getDrawable(), null, null, null);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

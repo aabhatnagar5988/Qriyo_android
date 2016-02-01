@@ -3,11 +3,13 @@ package android.qriyo.com.qriyo;
 import android.app.Activity;
 import android.content.Intent;
 import android.location.Location;
+import android.media.Image;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.qriyo.android.data.AppDelegate;
@@ -21,10 +23,12 @@ import com.qriyo.android.utility.GotLocationCallback;
 public class SplashActivity extends Activity implements GotLocationCallback{
 
 
+    ImageView logo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        logo=(ImageView)findViewById(R.id.logo_center);
         setDisplay();
         getCurrentLocation();
     }
@@ -65,5 +69,6 @@ public class SplashActivity extends Activity implements GotLocationCallback{
         DisplayMetrics dm=new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
         CommonViewUtility.getInstance().setScreen(dm.widthPixels,dm.heightPixels,dm.density);
+        CommonViewUtility.getInstance().adjustRelative(logo,450,411);
     }
 }
